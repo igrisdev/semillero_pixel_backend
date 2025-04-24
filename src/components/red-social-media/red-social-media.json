@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_red_social_media_red_social_medias",
+  "info": {
+    "displayName": "red_social_media",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "logo_red_social": {
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "name_social_media": {
+      "type": "string",
+      "required": true
+    },
+    "link_red_social_media": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
