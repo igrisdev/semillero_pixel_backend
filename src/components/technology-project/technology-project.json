@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_technology_project_technology_projects",
+  "info": {
+    "displayName": "technology_project",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "title_technology_project": {
+      "type": "string",
+      "required": true
+    },
+    "link_page_technology_project": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -14,10 +14,26 @@ export interface RedSocialMediaRedSocialMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface TechnologyProjectTechnologyProject
+  extends Struct.ComponentSchema {
+  collectionName: 'components_technology_project_technology_projects';
+  info: {
+    displayName: 'technology_project';
+    icon: 'plus';
+  };
+  attributes: {
+    link_page_technology_project: Schema.Attribute.String &
+      Schema.Attribute.Required;
+    title_technology_project: Schema.Attribute.String &
+      Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'red-social-media.red-social-media': RedSocialMediaRedSocialMedia;
+      'technology-project.technology-project': TechnologyProjectTechnologyProject;
     }
   }
 }
