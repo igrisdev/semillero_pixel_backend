@@ -48,7 +48,7 @@
         }
       }
     },
-    "text_project": {
+    "description_project": {
       "type": "text",
       "required": true,
       "pluginOptions": {
@@ -84,6 +84,11 @@
     },
     "date_deploy_project": {
       "type": "date"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title_project",
+      "required": true
     }
   }
 }

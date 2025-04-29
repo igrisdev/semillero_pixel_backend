@@ -40,7 +40,7 @@
         }
       }
     },
-    "text_hero": {
+    "description_hero": {
       "type": "text",
       "required": true,
       "pluginOptions": {

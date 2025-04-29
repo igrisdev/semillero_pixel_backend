@@ -1,5 +1,24 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface PictureEventPictureEvent extends Struct.ComponentSchema {
+  collectionName: 'components_picture_event_picture_events';
+  info: {
+    description: '';
+    displayName: 'picture_event';
+    icon: 'landscape';
+  };
+  attributes: {
+    article_event: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::article.article'
+    >;
+    date_end_event: Schema.Attribute.Date & Schema.Attribute.Required;
+    date_init_event: Schema.Attribute.Date & Schema.Attribute.Required;
+    images_event: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface RedSocialMediaRedSocialMedia extends Struct.ComponentSchema {
   collectionName: 'components_red_social_media_red_social_medias';
   info: {
@@ -32,6 +51,7 @@ export interface TechnologyProjectTechnologyProject
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'picture-event.picture-event': PictureEventPictureEvent;
       'red-social-media.red-social-media': RedSocialMediaRedSocialMedia;
       'technology-project.technology-project': TechnologyProjectTechnologyProject;
     }
