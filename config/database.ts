@@ -1,5 +1,7 @@
 import path from 'path'
 
+// connection
+
 export default ({ env }) => {
   const client = env('DATABASE_CLIENT', 'postgres')
 
