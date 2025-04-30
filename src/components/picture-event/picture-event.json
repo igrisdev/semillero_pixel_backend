@@ -16,11 +16,6 @@
         "files"
       ]
     },
-    "article_event": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::article.article"
-    },
     "date_init_event": {
       "type": "date",
       "required": true

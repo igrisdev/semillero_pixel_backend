@@ -8,10 +8,6 @@ export interface PictureEventPictureEvent extends Struct.ComponentSchema {
     icon: 'landscape';
   };
   attributes: {
-    article_event: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::article.article'
-    >;
     date_end_event: Schema.Attribute.Date & Schema.Attribute.Required;
     date_init_event: Schema.Attribute.Date & Schema.Attribute.Required;
     images_event: Schema.Attribute.Media<'images' | 'files', true> &

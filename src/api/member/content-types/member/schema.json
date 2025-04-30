@@ -106,6 +106,12 @@
       "type": "uid",
       "targetField": "name_member",
       "required": true
+    },
+    "publications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::publication.publication",
+      "mappedBy": "work_done_bies"
     }
   }
 }
