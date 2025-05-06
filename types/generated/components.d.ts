@@ -12,6 +12,10 @@ export interface PictureEventPictureEvent extends Struct.ComponentSchema {
     date_init_event: Schema.Attribute.Date & Schema.Attribute.Required;
     images_event: Schema.Attribute.Media<'images' | 'files', true> &
       Schema.Attribute.Required;
+    publication: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::publication.publication'
+    >;
   };
 }
 

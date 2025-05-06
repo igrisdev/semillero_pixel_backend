@@ -31,11 +31,6 @@
           "localized": true
         }
       }
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title_event",
-      "required": true
     }
   }
 }

@@ -444,7 +444,6 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title_event'> & Schema.Attribute.Required;
     title_event: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -719,6 +718,7 @@ export interface ApiPublicationPublication extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::publication.publication'
     >;
+    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     publisher: Schema.Attribute.Relation<'manyToOne', 'api::member.member'>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
