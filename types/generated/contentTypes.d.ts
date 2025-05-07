@@ -654,6 +654,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     members: Schema.Attribute.Relation<'manyToMany', 'api::member.member'>;
     person_name_article_publisher_project: Schema.Attribute.String &
       Schema.Attribute.Required;
+    publication: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::publication.publication'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title_project'> & Schema.Attribute.Required;
     technology_project: Schema.Attribute.Component<
@@ -718,7 +722,6 @@ export interface ApiPublicationPublication extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::publication.publication'
     >;
-    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     publisher: Schema.Attribute.Relation<'manyToOne', 'api::member.member'>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;

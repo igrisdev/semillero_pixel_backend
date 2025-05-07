@@ -89,6 +89,11 @@
       "type": "uid",
       "targetField": "title_project",
       "required": true
+    },
+    "publication": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::publication.publication"
     }
   }
 }
