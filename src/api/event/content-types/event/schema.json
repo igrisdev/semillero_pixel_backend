@@ -31,6 +31,14 @@
           "localized": true
         }
       }
+    },
+    "date_start": {
+      "required": true,
+      "type": "date"
+    },
+    "date_end": {
+      "type": "date",
+      "required": true
     }
   }
 }
