@@ -1,61 +1,74 @@
-# 🚀 Getting started with Strapi
+# 🚀 Semillero Pixel Backend
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Este proyecto es una aplicación backend construida con [Strapi](https://strapi.io/), un CMS Headless flexible y potente. El backend gestiona información sobre miembros, proyectos, publicaciones, eventos y más, con soporte para internacionalización (i18n).
 
-### `develop`
+## 🚀 Comandos Principales
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+### Desarrollar
 
-```
+Inicia la aplicación Strapi en modo desarrollo con recarga automática:
+
+```sh
 npm run develop
-# or
+# o
 yarn develop
 ```
 
-### `start`
+### Producción
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+Inicia la aplicación en modo producción:
 
-```
+```sh
 npm run start
-# or
+# o
 yarn start
 ```
 
-### `build`
+### Construir el Panel de Administración
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+Compila el panel de administración de Strapi:
 
-```
+```sh
 npm run build
-# or
+# o
 yarn build
 ```
 
-## ⚙️ Deployment
+## ⚙️ Configuración
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+Copia el archivo `.env.example` a `.env` y completa las variables necesarias para tu entorno (puerto, claves, conexión a base de datos, etc.).
 
-```
-yarn strapi deploy
-```
+## 🗄️ Modelos de Contenido
 
-## 📚 Learn more
+El backend gestiona los siguientes modelos principales:
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+- **Miembros**: Información de los integrantes del semillero, incluyendo redes sociales y proyectos asociados.
+- **Proyectos**: Detalles de proyectos realizados, tecnologías usadas y miembros participantes.
+- **Publicaciones**: Artículos, papers o documentos publicados por los miembros.
+- **Eventos**: Registro de eventos con imágenes y fechas.
+- **Sobre Nosotros**: Información institucional.
+- **Tipos de Publicación**: Clasificación y color para publicaciones.
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+Todos los modelos soportan internacionalización (i18n) y relaciones entre sí.
 
-## ✨ Community
+## 🛠️ Dependencias
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+- Node.js >= 18.x <= 22.x
+- PostgreSQL (por defecto) o puedes configurar MySQL/SQLite en `config/database.ts`
+- Strapi 5.x
+- Plugins: color-picker, users-permissions, cloud
+
+## 📚 Recursos
+
+- [Documentación oficial de Strapi](https://docs.strapi.io)
+- [Centro de recursos Strapi](https://strapi.io/resource-center)
+- [Foro y comunidad](https://forum.strapi.io/)
+
+## 👥 Comunidad
+
+- [Discord de Strapi](https://discord.strapi.io)
+- [Awesome Strapi](https://github.com/strapi/awesome-strapi)
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+<sub>Proyecto desarrollado por Johan Alvarez</sub>
